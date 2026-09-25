@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日文單字練習 ｜ TRY！日本語 N5–N1 達陣</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
+    color: #4a4a4a; min-height: 100vh;
+    background: #fffafc;
+  }
+  /* 背景：櫻花照片 + 明亮白色罩層 */
+  .bg {
+    position: fixed; inset: 0; z-index: -2;
+    background: url('jp-assets/sakura.jpg') center/cover no-repeat;
+  }
+  .bg::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(255,250,252,.82) 0%, rgba(255,255,255,.94) 45%, rgba(255,250,252,.88) 100%);
+  }
+
+  header { text-align: center; padding: 72px 20px 30px; }
+  .logo { font-size: 3rem; }
+  h1 { font-size: 2.1rem; letter-spacing: .12em; color: #3d3d3d; margin-top: 10px; font-weight: 700; }
+  h1 .accent { color: #e05260; }
+  .subtitle { margin-top: 12px; color: #999; font-size: .95rem; letter-spacing: .25em; }
+  .divider { width: 56px; height: 3px; background: #f2b8c1; margin: 22px auto 0; border-radius: 3px; }
+
+  main { max-width: 1060px; margin: 0 auto; padding: 20px 20px 70px; }
+  .section-title { text-align: center; font-size: 1rem; color: #b58a92; letter-spacing: .3em; margin: 26px 0 26px; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+  .card {
+    background: #fff; border-radius: 18px; overflow: hidden;
+    box-shadow: 0 6px 22px rgba(224,82,96,.08);
+    transition: transform .25s, box-shadow .25s;
+    display: flex; flex-direction: column;
+  }
+  .card:hover { transform: translateY(-6px); box-shadow: 0 14px 34px rgba(224,82,96,.16); }
+  .card .photo { height: 130px; background-size: cover; background-position: center; position: relative; }
+  .card .photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255,255,255,0) 40%, rgba(255,255,255,.9) 100%); }
+  .card .body { padding: 4px 22px 22px; text-align: center; flex: 1; display: flex; flex-direction: column; }
+  .lv { display: inline-block; margin: 0 auto; padding: 4px 18px; border-radius: 20px; color: #fff; font-weight: bold; font-size: 1.05rem; letter-spacing: .1em; }
+  .card h2 { font-size: 1.15rem; margin-top: 12px; color: #333; }
+  .card .desc { font-size: .88rem; color: #999; margin-top: 6px; line-height: 1.7; flex: 1; }
+  .card .go {
+    margin-top: 16px; display: inline-block; padding: 11px 30px; border-radius: 26px;
+    text-decoration: none; font-weight: bold; font-size: .95rem; transition: .2s;
+  }
+  .card .go:hover { filter: brightness(1.08); transform: scale(1.03); }
+
+  /* 各等級配色（ pastel 明亮系） */
+  .n5 .lv, .n5 .go { background: #f2718a; } .n5 .go { color: #fff; }
+  .n4 .lv, .n4 .go { background: #5b8def; } .n4 .go { color: #fff; }
+  .n3 .lv, .n3 .go { background: #3fbf8f; } .n3 .go { color: #fff; }
+  .n2 .lv, .n2 .go { background: #f5a44a; } .n2 .go { color: #fff; }
+  .n1 .lv, .n1 .go { background: #9b7ede; } .n1 .go { color: #fff; }
+
+  .features { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 34px 0 6px; }
+  .features span { background: rgba(255,255,255,.85); border: 1px solid #f6dce1; color: #c07786; font-size: .82rem; padding: 6px 14px; border-radius: 16px; }
+
+  footer { text-align: center; color: #c9a7ad; font-size: .8rem; padding: 30px 0 40px; letter-spacing: .1em; }
+  @media (max-width: 480px) { h1 { font-size: 1.5rem; } header { padding: 52px 16px 20px; } }
+</style>
+</head>
+<body>
+<div class="bg"></div>
+
+<header>
+  <div class="logo">🌸</div>
+  <h1>日文單字<span class="accent">練習</span>教室</h1>
+  <div class="subtitle">TRY！日本語 達陣シリーズ ｜ N5 － N1</div>
+  <div class="divider"></div>
+</header>
+
+<main>
+  <div class="section-title">選 擇 級 別 開 始 練 習</div>
+
+  <div class="cards">
+    <div class="card n5">
+      <div class="photo" style="background-image:url('jp-assets/sakura.jpg')"></div>
+      <div class="body">
+        <span class="lv">N5</span>
+        <h2>入門基礎單字</h2>
+        <div class="desc">701 個詞條<br>日常會話必備的基礎詞彙</div>
+        <a class="go" href="n5-vocab-cards.html">開始練習 →</a>
+      </div>
+    </div>
+
+    <div class="card n4">
+      <div class="photo" style="background-image:url('jp-assets/kyoto.jpg')"></div>
+      <div class="body">
+        <span class="lv">N4</span>
+        <h2>基礎進階單字</h2>
+        <div class="desc">722 個詞條<br>日常情境更完整的表達</div>
+        <a class="go" href="n4-vocab-cards.html">開始練習 →</a>
+      </div>
+    </div>
+
+    <div class="card n3">
+      <div class="photo" style="background-image:url('jp-assets/pagoda.jpg')"></div>
+      <div class="body">
+        <span class="lv">N3</span>
+        <h2>中級單字</h2>
+        <div class="desc">1121 個詞條<br>邁向流暢溝通的關鍵詞彙</div>
+        <a class="go" href="n3-vocab-cards.html">開始練習 →</a>
+      </div>
+    </div>
+
+    <div class="card n2">
+      <div class="photo" style="background-image:url('jp-assets/machiya.jpg')"></div>
+      <div class="body">
+        <span class="lv">N2</span>
+        <h2>中高級單字</h2>
+        <div class="desc">1228 個詞條<br>新聞、職場場合常用詞彙</div>
+        <a class="go" href="n2-vocab-cards.html">開始練習 →</a>
+      </div>
+    </div>
+
+    <div class="card n1">
+      <div class="photo" style="background-image:url('jp-assets/sakura.jpg');background-position:bottom"></div>
+      <div class="body">
+        <span class="lv">N1</span>
+        <h2>高級單字</h2>
+        <div class="desc">1558 個詞條<br>精通日語的最後一哩路</div>
+        <a class="go" href="n1-vocab-cards.html">開始練習 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="features">
+    <span>🃏 翻卡學習</span>
+    <span>🔊 日文女聲＋中文發音</span>
+    <span>🔁 自動播放（外文唸兩遍）</span>
+    <span>🗣️ 語速／間隔可調</span>
+    <span>✅ 選擇題測驗</span>
+    <span>📊 學習歷程紀錄</span>
+  </div>
+</main>
+
+<footer>がんばって！每一天的一小步，都是通往流利日語的一大步 🗾</footer>
+</body>
+</html>
